@@ -1,16 +1,42 @@
 .about-container {
-  display: flex;
-  flex-direction: column;
   padding: 70px;
-  align-items: center;
 }
 
-.about-container h1 {
+.about-container .about {
+  width: calc(100% - 400px);
+}
+
+.about-container .about h1 {
   font-family: "IBM Plex Mono";
   font-weight: bold;
   font-size: 32px;
 }
 
-.about-container .description {
+.about-container .about .description {
   font-size: 18px;
+}
+
+.about-container .resume-container {
+  text-align: center;
+  width: 400px;
+}
+
+.about-container .resume-container div {
+  margin-bottom: 20px;
+}
+
+.about-container .resume-container img {
+  border: 1px solid black;
+  width: 160px;
+}
+
+@media screen and (max-width: 991px) {
+  .about-container .about {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .about-container .resume-container {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
