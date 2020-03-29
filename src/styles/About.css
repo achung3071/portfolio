@@ -6,10 +6,11 @@
 }
 
 .about-container h1 {
+  font-family: "IBM Plex Mono";
   font-weight: bold;
   font-size: 32px;
 }
 
 .about-container .description {
-  font-size: 20px;
+  font-size: 18px;
 }

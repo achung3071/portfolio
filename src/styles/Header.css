@@ -7,15 +7,15 @@
   color: white;
   margin: 0px;
   font-weight: bold;
-  font-family: "Didact Gothic";
+  font-family: "Monda";
   font-size: 40px;
 }
 
 .header-text h2 {
   color: white;
   margin: 0px;
-  font-family: "Didact Gothic";
-  font-size: 25px;
+  font-family: "IBM Plex Mono";
+  font-size: 22px;
 }
 
 .header-text a:hover:after {
@@ -24,12 +24,13 @@
 }
 
 .header-text .button-group {
-  padding: 20px 0px;
+  padding-bottom: 20px;
 }
 
 .header-text .button-group button {
   color: white;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 .header-text .button-group button:hover {
