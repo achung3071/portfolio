@@ -1,0 +1,15 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  align-items: center;
+}
+
+.about-container h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.about-container .description {
+  font-size: 20px;
+}

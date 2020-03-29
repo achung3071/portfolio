@@ -1,6 +1,5 @@
 .header {
   background-image: url("https://img.pngio.com/starry-night-backgrounds-30-background-pictures-starry-night-backgrounds-png-1920_1080.png");
-  min-height: 700px;
   object-fit: cover;
   background-repeat: no-repeat;
 }
@@ -21,7 +20,6 @@
 .header-text h2 {
   color: white;
   margin: 0px;
-  font-weight: 500;
   font-family: "Didact Gothic";
   font-size: 25px;
 }

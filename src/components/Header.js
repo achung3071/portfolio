@@ -38,38 +38,36 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
-      <Row className="header" align="middle">
-        <Col md={24} lg={12}>
-          <div className="header-text">
-            <h1>Andrew Chung</h1>
-            <h2>Software Developer</h2>
-            <div className="button-group">
-              <Button type="ghost" size="large">
-                About
-              </Button>
-              <Button type="ghost" size="large">
-                Projects
-              </Button>
-              <Button type="ghost" size="large">
-                Contact
-              </Button>
-            </div>
+    <Row className="header" align="middle">
+      <Col md={24} lg={12}>
+        <div className="header-text">
+          <h1>Andrew Chung</h1>
+          <h2>Software Developer</h2>
+          <div className="button-group">
+            <Button type="ghost" size="large">
+              About
+            </Button>
+            <Button type="ghost" size="large">
+              Projects
+            </Button>
+            <Button type="ghost" size="large">
+              Contact
+            </Button>
           </div>
-        </Col>
-        <Col md={24} lg={12}>
-          <div className="code-container">
-            <SyntaxHighlighter
-              language="javascript"
-              style={dark}
-              customStyle={codeStyle}
-            >
-              {codeString}
-            </SyntaxHighlighter>
-          </div>
-        </Col>
-      </Row>
-    </div>
+        </div>
+      </Col>
+      <Col md={24} lg={12}>
+        <div className="code-container">
+          <SyntaxHighlighter
+            language="javascript"
+            style={dark}
+            customStyle={codeStyle}
+          >
+            {codeString}
+          </SyntaxHighlighter>
+        </div>
+      </Col>
+    </Row>
   );
 };
 
