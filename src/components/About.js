@@ -19,7 +19,7 @@ const About = () => {
           I'm also the incoming Tech Studio Lead at Northwestern’s Develop +
           Innovate for Social Change and a peer mentor for CS 110 (Introductory
           Python). Going forward, I hope to utilize my skills in technology to
-          positively affect others around me and beyond.
+          make a positive impact on others around me and beyond.
         </div>
       </Col>
       <Col className="resume-container">
