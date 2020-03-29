@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Button } from "antd";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "../styles/Header.css";
 
@@ -33,41 +34,54 @@ const Header = () => {
 
   const codeStyle = {
     backgroundColor: "transparent",
-    border: "none",
+    border: 0,
+    boxShadow: 0,
     padding: 0
   };
 
+  const layers = [
+    {
+      image:
+        "https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg",
+      amount: 0.55
+    }
+  ];
+
   return (
-    <Row className="header" align="middle">
-      <Col md={24} lg={12}>
-        <div className="header-text">
-          <h1>Andrew Chung</h1>
-          <h2>Software Developer</h2>
-          <div className="button-group">
-            <Button type="ghost" size="large">
-              About
-            </Button>
-            <Button type="ghost" size="large">
-              Projects
-            </Button>
-            <Button type="ghost" size="large">
-              Contact
-            </Button>
-          </div>
-        </div>
-      </Col>
-      <Col md={24} lg={12}>
-        <div className="code-container">
-          <SyntaxHighlighter
-            language="javascript"
-            style={dark}
-            customStyle={codeStyle}
-          >
-            {codeString}
-          </SyntaxHighlighter>
-        </div>
-      </Col>
-    </Row>
+    <ParallaxProvider>
+      <ParallaxBanner layers={layers} style={{ height: "auto" }}>
+        <Row className="header" align="middle">
+          <Col md={24} lg={12}>
+            <div className="header-text">
+              <h1>Andrew Chung</h1>
+              <h2>Software Developer</h2>
+              <div className="button-group">
+                <Button type="ghost" size="large">
+                  About
+                </Button>
+                <Button type="ghost" size="large">
+                  Projects
+                </Button>
+                <Button type="ghost" size="large">
+                  Contact
+                </Button>
+              </div>
+            </div>
+          </Col>
+          <Col md={24} lg={12}>
+            <div className="code-container">
+              <SyntaxHighlighter
+                language="javascript"
+                style={dark}
+                customStyle={codeStyle}
+              >
+                {codeString}
+              </SyntaxHighlighter>
+            </div>
+          </Col>
+        </Row>
+      </ParallaxBanner>
+    </ParallaxProvider>
   );
 };
 
