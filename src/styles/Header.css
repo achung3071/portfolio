@@ -1,0 +1,63 @@
+.header {
+  background-image: url("https://img.pngio.com/starry-night-backgrounds-30-background-pictures-starry-night-backgrounds-png-1920_1080.png");
+  min-height: 700px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.header-text {
+  color: white;
+  padding: 70px;
+}
+
+.header-text h1 {
+  color: white;
+  margin: 0px;
+  font-weight: bold;
+  font-family: "Didact Gothic";
+  font-size: 40px;
+}
+
+.header-text h2 {
+  color: white;
+  margin: 0px;
+  font-weight: 500;
+  font-family: "Didact Gothic";
+  font-size: 25px;
+}
+
+.header-text a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.header-text .button-group {
+  padding: 20px 0px;
+}
+
+.header-text .button-group button {
+  color: white;
+  margin-right: 20px;
+}
+
+.header-text .button-group button:hover {
+  background-color: white;
+  color: black;
+}
+
+.code-container {
+  padding: 70px;
+}
+
+.code-container pre::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .header-text {
+    padding-bottom: 0px;
+  }
+  .code-container {
+    padding-top: 0px;
+  }
+}
