@@ -5,7 +5,15 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "../styles/Header.css";
 
-const Header = () => {
+const Header = ({ refs }) => {
+  const { aboutRef, projectRef, footerRef } = refs;
+  const scrollTo = ref => () => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth"
+    });
+  };
+
   const codeString = `describe("Andrew Chung", () => {
   it("should be a developer", () => {
     expect(developerName)
@@ -55,13 +63,13 @@ const Header = () => {
             <h1>Andrew Chung</h1>
             <h2>Software Developer</h2>
             <div className="button-group">
-              <Button type="ghost" size="large">
+              <Button type="ghost" size="large" onClick={scrollTo(aboutRef)}>
                 About
               </Button>
-              <Button type="ghost" size="large">
+              <Button type="ghost" size="large" onClick={scrollTo(projectRef)}>
                 Projects
               </Button>
-              <Button type="ghost" size="large">
+              <Button type="ghost" size="large" onClick={scrollTo(footerRef)}>
                 Contact
               </Button>
             </div>

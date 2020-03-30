@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(15, 15, 40);
+  padding: 70px;
+}
+
+.footer h2 {
+  font-family: "Monda";
+  color: white;
+  margin-bottom: 40px;
+}
+
+.footer .social-media-btn-group {
+  margin-bottom: 40px;
+}
+
+.footer .ant-btn {
+  margin: 0px 8px;
+}
+
+.footer .copyright {
+  color: white;
+  font-size: 14px;
+}

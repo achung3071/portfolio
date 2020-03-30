@@ -5,10 +5,11 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import "../styles/Projects.css";
 const { Meta } = Card;
 
-const Projects = () => {
+const Projects = ({ projectRef }) => {
   const layers = [
     {
-      image: "https://live.staticflickr.com/2444/4081217898_8d27f256ea_o.jpg",
+      image:
+        "https://www.ecopetit.cat/wpic/mpic/43-437293_2560x1600-black-abstract-wallpaper-for-iphone-data-high.jpg",
       amount: 0.55
     }
   ];
@@ -37,30 +38,32 @@ const Projects = () => {
   ];
 
   return (
-    <ParallaxBanner layers={layers} style={{ height: "auto" }}>
-      <Row className="projects-container">
-        <Col span={24} style={{ marginBottom: "30px" }}>
-          <h1>projects</h1>
-        </Col>
-        <Col style={{ width: "100%" }}>
-          <Row>
-            {projects.map(project => (
-              <Col xs={24} md={12} lg={8} xl={6}>
-                <Card
-                  cover={<img alt="" src={project.image} />}
-                  actions={actions}
-                >
-                  <Meta
-                    title={project.name}
-                    description={project.description}
-                  />
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Col>
-      </Row>
-    </ParallaxBanner>
+    <div ref={projectRef}>
+      <ParallaxBanner layers={layers} style={{ height: "auto" }}>
+        <Row className="projects-container">
+          <Col span={24} style={{ marginBottom: "30px" }}>
+            <h1>projects</h1>
+          </Col>
+          <Col style={{ width: "100%" }}>
+            <Row>
+              {projects.map(project => (
+                <Col xs={24} md={12} lg={8} xl={6}>
+                  <Card
+                    cover={<img alt="" src={project.image} />}
+                    actions={actions}
+                  >
+                    <Meta
+                      title={project.name}
+                      description={project.description}
+                    />
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+      </ParallaxBanner>
+    </div>
   );
 };
 
