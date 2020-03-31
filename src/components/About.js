@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Button } from "antd";
-import Resume from "../assets/andrew_resume_main.png";
+import ResumeImage from "../assets/andrew_resume_main.png";
+import Resume from "../assets/andrew_resume_main.pdf";
 import "../styles/About.css";
 
 const About = ({ aboutRef }) => {
@@ -26,10 +27,12 @@ const About = ({ aboutRef }) => {
         </Col>
         <Col className="resume-container">
           <div>
-            <img alt="" src={Resume} />
+            <img alt="" src={ResumeImage} />
           </div>
           <div>
-            <Button>Download Resume PDF</Button>
+            <Button href={Resume} download>
+              Download Resume PDF
+            </Button>
           </div>
         </Col>
       </Row>

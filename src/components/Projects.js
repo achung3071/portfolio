@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card, Tag } from "antd";
 import { LinkOutlined, GithubOutlined } from "@ant-design/icons";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { projects } from "../utils/ProjectData";
@@ -7,14 +7,14 @@ import "../styles/Projects.css";
 const { Meta } = Card;
 
 const importAll = r => {
-  let images = {};
+  let assets = {};
   r.keys().forEach(item => {
-    images[item.replace("./", "")] = r(item);
+    assets[item.replace("./", "")] = r(item);
   });
-  return images;
+  return assets;
 };
 
-const images = importAll(
+const assets = importAll(
   require.context("../assets", false, /\.(png|jpe?g|svg)$/)
 );
 
@@ -60,7 +60,7 @@ const Projects = ({ projectRef }) => {
                     cover={
                       <img
                         alt=""
-                        src={images[project.imageName]}
+                        src={assets[project.imageName]}
                         style={{ height: "250px", objectFit: "contain" }}
                       />
                     }
@@ -68,7 +68,18 @@ const Projects = ({ projectRef }) => {
                   >
                     <Meta
                       title={project.name}
-                      description={project.description}
+                      description={
+                        <div>
+                          <div className="description-container">
+                            {project.description}
+                          </div>
+                          <div>
+                            {project.stack.map(skill => (
+                              <Tag>{skill}</Tag>
+                            ))}
+                          </div>
+                        </div>
+                      }
                     />
                   </Card>
                 </Col>

@@ -15,3 +15,11 @@
 .ant-card-meta-description {
   font-family: "Monda";
 }
+
+.projects-container .description-container {
+  margin-bottom: 10px;
+}
+
+.projects-container .ant-tag {
+  margin-bottom: 5px;
+}
