@@ -21,8 +21,7 @@ const assets = importAll(
 const Projects = ({ projectRef }) => {
   const layers = [
     {
-      image:
-        "https://www.ecopetit.cat/wpic/mpic/43-437293_2560x1600-black-abstract-wallpaper-for-iphone-data-high.jpg",
+      image: assets["projects_background.jpg"],
       amount: 0.55
     }
   ];

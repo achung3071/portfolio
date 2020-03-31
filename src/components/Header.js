@@ -3,6 +3,7 @@ import { Row, Col, Button } from "antd";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import HeaderBackground from "../assets/header_background.jpg";
 import "../styles/Header.css";
 
 const Header = ({ refs }) => {
@@ -49,8 +50,7 @@ const Header = ({ refs }) => {
 
   const layers = [
     {
-      image:
-        "https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg",
+      image: HeaderBackground,
       amount: 0.55
     }
   ];
