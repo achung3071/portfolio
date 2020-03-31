@@ -27,16 +27,23 @@ const Projects = ({ projectRef }) => {
     }
   ];
 
-  const actions = [
-    <div>
-      <LinkOutlined style={{ marginRight: "8px" }} />
-      Website
-    </div>,
-    <div>
-      <GithubOutlined style={{ marginRight: "8px" }} />
-      Repository
-    </div>
-  ];
+  const actions = (repository, website) => {
+    const arr = [
+      <a href={repository} target="_blank" rel="noopener noreferrer">
+        <GithubOutlined style={{ marginRight: "8px" }} />
+        Repository
+      </a>
+    ];
+    if (website) {
+      arr.push(
+        <a href={website} target="_blank" rel="noopener noreferrer">
+          <LinkOutlined style={{ marginRight: "8px" }} />
+          Website
+        </a>
+      );
+    }
+    return arr;
+  };
 
   return (
     <div ref={projectRef}>
@@ -57,7 +64,7 @@ const Projects = ({ projectRef }) => {
                         style={{ height: "250px", objectFit: "contain" }}
                       />
                     }
-                    actions={actions}
+                    actions={actions(project.repository, project.url)}
                   >
                     <Meta
                       title={project.name}

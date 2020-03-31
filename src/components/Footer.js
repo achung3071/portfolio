@@ -15,35 +15,49 @@ const Footer = ({ footerRef }) => {
       <div className="social-media-btn-group">
         <Tooltip title="LinkedIn">
           <Button
-            shape="circle"
-            type="ghost"
+            shape="circle-outline"
+            ghost={true}
             size="large"
-            icon={<LinkedinFilled style={{ color: "white" }} />}
-          />
+            href="https://www.linkedin.com/in/andrew-chung-378879185/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinFilled style={{ color: "white" }} />
+          </Button>
         </Tooltip>
         <Tooltip title="GitHub">
           <Button
-            shape="circle"
-            type="ghost"
+            shape="circle-outline"
+            ghost={true}
             size="large"
-            icon={<GithubFilled style={{ color: "white" }} />}
-          />
+            href="https://github.com/achung3071"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubFilled style={{ color: "white" }} />
+          </Button>
         </Tooltip>
         <Tooltip title="Medium">
           <Button
-            shape="circle"
-            type="ghost"
+            shape="circle-outline"
+            ghost={true}
             size="large"
-            icon={<MediumOutlined style={{ color: "white" }} />}
-          />
+            href="https://medium.com/@andrewchung2022"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MediumOutlined style={{ color: "white" }} />
+          </Button>
         </Tooltip>
         <Tooltip title="Email">
           <Button
-            shape="circle"
-            type="ghost"
+            shape="circle-outline"
+            ghost={true}
             size="large"
-            icon={<MailOutlined style={{ color: "white" }} />}
-          />
+            href="mailto:andrewchung2022@u.northwestern.edu"
+          >
+            <MailOutlined style={{ color: "white" }} />
+          </Button>
         </Tooltip>
       </div>
       <div className="copyright">© 2020 Andrew Chung</div>
