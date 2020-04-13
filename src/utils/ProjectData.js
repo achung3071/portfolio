@@ -11,8 +11,8 @@ export const projects = [
       "React",
       "Firebase",
       "Cloud Firestore",
-      "React-Bootstrap"
-    ]
+      "React-Bootstrap",
+    ],
   },
   {
     name: "itemShare",
@@ -25,8 +25,8 @@ export const projects = [
       "React",
       "Firebase",
       "Realtime Database",
-      "Material-UI"
-    ]
+      "Material-UI",
+    ],
   },
   {
     name: "Booktogether (書로모임)",
@@ -41,8 +41,16 @@ export const projects = [
       "Elasticsearch",
       "Express",
       "Typescript",
-      "AWS"
-    ]
+      "AWS",
+    ],
+  },
+  {
+    name: "Vidplus",
+    repository: "https://github.com/achung3071/vidplus-client-public",
+    imageName: "vidplus.png",
+    description:
+      "A web-based video annotation tool for YouTube, Facebook, Dailymotion videos and more.",
+    stack: ["Front-end", "React", "Redux", "Redux-Saga", "Ant Design", "MySQL"],
   },
   {
     name: "Taker Assistant",
@@ -56,7 +64,7 @@ export const projects = [
       "S3",
       "Sagemaker",
       "Javascript",
-      "HTML/CSS"
-    ]
-  }
+      "HTML/CSS",
+    ],
+  },
 ];
